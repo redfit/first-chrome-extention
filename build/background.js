@@ -1,3 +1,5 @@
-chrome.browserAction.setBadgeText({
-  "text": "52"
+chrome.browserAction.onClicked.addListener(function() {
+  return chrome.tabs.executeScript(null, {
+    "code": "document.body.style.backgroundColor='green'"
+  });
 });

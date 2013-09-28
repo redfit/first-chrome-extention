@@ -1,17 +1,20 @@
 {
-    "name": "My First Extension",
+    "name": "My Third Extension",
     "version": "0.1",
     "manifest_version": 2,
 
-    "description": "はじめての拡張！",
+    "description": "今いるページの背景色を変えるよ！2",
+
+    "permissions": [
+        "tabs", "http://*/*"
+    ],
 
     "background": {
-      "scripts": ["background.js"]
+        "scripts": ["background.js"]
     },
 
     "browser_action": {
         "default_icon": "icon19.png",
-        "default_title": "My First Extension",
-        "default_popup": "popup.html"
+        "default_title": "My Third Extension"
     }
 }
