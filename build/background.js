@@ -1,7 +1,11 @@
-chrome.browserAction.onClicked.addListener(function() {
-  var color;
-  color = localStorage['color'] ? localStorage['color'] : "red";
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+  if (tab.url.indexOf('dotinstall') !== -1) {
+    return chrome.pageAction.show(tabId);
+  }
+});
+
+chrome.pageAction.onClicked.addListener(function() {
   return chrome.tabs.executeScript(null, {
-    "code": "document.body.style.backgroundColor='" + color + "'"
+    "code": "document.body.style.backgroundColor='red'"
   });
 });
