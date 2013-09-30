@@ -1,17 +1,19 @@
 {
-    "name": "My First Extension",
+    "name": "My 7th Extension",
     "version": "0.1",
     "manifest_version": 2,
 
-    "description": "はじめての拡張！",
+    "description": "Context menu twitter search",
 
-    "background": {
-      "scripts": ["background.js"]
+    "permissions": [
+        "tabs", "http://*/*", "contextMenus"
+    ],
+
+    "icons": {
+        "16": "icon16.png"
     },
 
-    "browser_action": {
-        "default_icon": "icon19.png",
-        "default_title": "My First Extension",
-        "default_popup": "popup.html"
+    "background": {
+        "scripts": ["background.js"]
     }
 }
